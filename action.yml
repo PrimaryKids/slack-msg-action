@@ -1,0 +1,15 @@
+name: 'Post to Slack Channel'
+description: 'Posts to a Slack channel via provided webhook token and message'
+inputs:
+  text:
+    description: 'Message for slack post'
+    required: true
+  channel:
+    description: 'Channel for slack post'
+    required: true
+  SLACK_TOKEN:
+    description: 'The token for the slack webhook. Should be in the format XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

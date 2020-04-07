@@ -1,0 +1,22 @@
+{
+  "name": "slack-msg-action",
+  "version": "1.0.0",
+  "description": "Javascript Action for posting to slack via webhook",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimaryKids/slack-msg-action.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrimaryKids/slack-msg-action/issues"
+  },
+  "homepage": "https://github.com/PrimaryKids/slack-msg-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "slack-node": "^0.1.8"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.1"
+  }
+}
