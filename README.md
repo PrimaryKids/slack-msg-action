@@ -8,7 +8,6 @@ This action uses sends messages to slack via a webhook token
 * `text` - **Required** The contents of the message we want to post to slack
 * `channel` - **Required** The name of the channel. eg. #push-channel
 * `color` - **Optional** The color of the attachment block. Valid values are good, warning, danger or any hex color code (eg. `#439FE0`)
-* `title` - **Optional** The title of the attachment block.
 
 ## Example usage
 
@@ -17,6 +16,7 @@ uses: PrimaryKids/actions/shopify-theme-api@master
 with:
   text: 'I'm posting to slack!''
   channel: '#push-channel'
+  color: 'good'
   SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
 ```
 

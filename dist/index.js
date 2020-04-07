@@ -300,26 +300,21 @@ async function run() {
     const slack_token = core.getInput('SLACK_TOKEN')
     const channel = core.getInput('channel')
     const text = core.getInput('text')
-    var color = core.getInput('color')
-    var title = core.getInput('title')
+    const color = core.getInput('color')
+    const github_actor = process.env.GITHUB_ACTOR;
 
     const webhookUri = "https://hooks.slack.com/services/T0PGV4TEJ/" + slack_token;
 
     slack.setWebhook(webhookUri);
-    if (color || title) {
-      console.log(color + title)
+    if (color || github_actor) {
       slack.webhook({
         channel: channel,
         attachments: [
           {
+            "author_name": github_actor,
+            "author_icon": "https://avatars2.githubusercontent.com/" + github_actor,
             "color": color,
-            "fields": [
-              {
-                "title": title,
-                "value": text,
-                "short": false
-              }
-            ]
+            "text": text
           }
         ]
       }, function(err, response) {
