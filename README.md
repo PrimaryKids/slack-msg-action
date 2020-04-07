@@ -4,17 +4,11 @@ This action uses sends messages to slack via a webhook token
 
 ## Inputs
 
-### `text`
-
-**Required** The contents of the message we want to post to slack
-
-### `channel`
-
-**Required** The name of the channel. e.g. #push-channel
-
-### `SLACK_TOKEN`
-
-**Required** The webhook token for authentication to slack. Should be set in GitHub Secrets for the repo this action is being used.
+* `SLACK_TOKEN` - **Required** The webhook token for authentication to slack. Should be set in GitHub Secrets for the repo this action is being used.
+* `text` - **Required** The contents of the message we want to post to slack
+* `channel` - **Required** The name of the channel. eg. #push-channel
+* `color` - **Optional** The color of the attachment block. Valid values are good, warning, danger or any hex color code (eg. `#439FE0`)
+* `title` - **Optional** The title of the attachment block.
 
 ## Example usage
 

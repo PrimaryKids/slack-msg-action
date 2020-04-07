@@ -7,6 +7,10 @@ inputs:
   channel:
     description: 'Channel for slack post'
     required: true
+  color:
+    required: false
+  title:
+    required: false
   SLACK_TOKEN:
     description: 'The token for the slack webhook. Should be in the format XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX'
     required: true
